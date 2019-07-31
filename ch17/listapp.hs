@@ -1,5 +1,10 @@
 module Listapp where
 
+import Control.Applicative
+import Test.QuickCheck
+import Test.QuickCheck.Checkers
+import Test.QuickCheck.Classes
+
 data List a =
     Nil
   | Cons a (List a)
@@ -40,3 +45,15 @@ instance Applicative List where
   _ <*> Nil = Nil
   --  (Cons f fs) <*> xs = (f <$> xs) <> (fs <*> xs)
   fs <*> xs = flatMap (<$> xs) fs
+
+instance Arbitrary a 
+      => Arbitrary (List a) where
+  arbitrary =
+    frequency [(1, pure Nil),
+               (5, Cons <$> arbitrary <*> arbitrary)]
+
+instance Eq a => EqProp (List a) where (=-=) = eq
+xsTest = [("b", "w", "c")]
+
+testListApplicative :: IO ()
+testListApplicative = quickBatch $ applicative xsTest
