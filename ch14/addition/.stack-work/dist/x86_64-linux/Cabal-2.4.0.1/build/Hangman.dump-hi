@@ -1,0 +1,1131 @@
+
+==================== FINAL INTERFACE ====================
+2019-07-21 21:19:48.902108186 UTC
+
+interface addition-0.1.0.0-Isu6SWsVkOo5ljPO0Uf38Y:Hangman 8065
+  interface hash: a6c36ef1cfe86269ab7755dc6c709431
+  ABI hash: e2b1cc2968d060f10a7f50a9aca2dc8d
+  export-list hash: 394e0e58ded8254e1f4c0cb0619e3537
+  orphan hash: 4843bb8a1a12bc46d3117dd7c9579b42
+  flag hash: 81c54bb85303292c9c9c961f73569c7b
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Hangman.allWords
+  Hangman.alreadyGuessed
+  Hangman.charInWord
+  Hangman.drawHangman
+  Hangman.drawHangman'
+  Hangman.fillInCharacter
+  Hangman.freshPuzzle
+  Hangman.gameOver
+  Hangman.gameWin
+  Hangman.gameWords
+  Hangman.handleGuess
+  Hangman.incorrectGuesses
+  Hangman.main
+  Hangman.maxWordLength
+  Hangman.minWordLength
+  Hangman.randomWord
+  Hangman.randomWord'
+  Hangman.renderPuzzleChar
+  Hangman.runGame
+  Hangman.Puzzle{Hangman.Puzzle}
+  Hangman.WordList{Hangman.WordList}
+module dependencies:
+package dependencies: array-0.5.3.0 base-4.12.0.0* deepseq-1.4.4.0
+                      ghc-prim-0.5.3 integer-gmp-1.0.2.0 random-1.1* time-1.8.0.2
+orphans: time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian base-4.12.0.0:GHC.Float
+         base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Complex base-4.12.0.0:Data.Functor.Compose
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity
+                         base-4.12.0.0:Data.Functor.Product base-4.12.0.0:Data.Functor.Sum
+                         base-4.12.0.0:Data.Monoid base-4.12.0.0:Data.Semigroup
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:Data.Version
+                         base-4.12.0.0:Data.Void base-4.12.0.0:GHC.Exts
+                         base-4.12.0.0:GHC.Generics base-4.12.0.0:GHC.IO.Exception
+import  -/  base-4.12.0.0:Control.Monad 07eaec7fd256019b318d048d00f45b1c
+import  -/  base-4.12.0.0:Data.Char 74f67fe9150a102afa18766e840f6832
+import  -/  base-4.12.0.0:Data.Foldable efb37371da929e7bc88d896298d2d979
+import  -/  base-4.12.0.0:Data.List 17d0c71c557e42abe196f130788fd997
+import  -/  base-4.12.0.0:Data.Maybe 9b76a39e833465c3c5b3c078b431417f
+import  -/  base-4.12.0.0:Data.OldList e931cf456dc87f11ee6e6fb153bca23e
+import  -/  base-4.12.0.0:GHC.Base c00b75f0b052d05c55ba6a4dd1c63b26
+import  -/  base-4.12.0.0:GHC.IO.Handle fe51659cf05ea3ecd36fe5e2d515d89a
+import  -/  base-4.12.0.0:GHC.IO.Handle.FD 57dd508e0260edfe7dfb9592eb9a6e63
+import  -/  base-4.12.0.0:GHC.IO.Handle.Types 8909e00409cd23d4e66395a7e93f216d
+import  -/  base-4.12.0.0:GHC.List 4014a3c8a3b7c31c8325f6bcf1feea4a
+import  -/  base-4.12.0.0:GHC.Num c2039f03637c68f47b0bbff4c18ec616
+import  -/  base-4.12.0.0:GHC.Show 838a5d039379d82d9626aae53dfce276
+import  -/  base-4.12.0.0:GHC.Unicode 87726eb81a3f9c9b22160a0afd5dc56a
+import  -/  base-4.12.0.0:Prelude 3c779dfd6448bdd8e234c336802c2acb
+import  -/  base-4.12.0.0:System.Exit 3c945ec7c596067c067092c41083c3d0
+import  -/  base-4.12.0.0:System.IO dd4f3cfe73b94b7cae46a4ca98a3f09f
+import  -/  ghc-prim-0.5.3:GHC.Classes 0f6fd7d7db53fc48f6e1f01803cc6c9d
+import  -/  ghc-prim-0.5.3:GHC.Types 57064c9f957b09bc2e360061ad5cae0b
+import  -/  random-1.1:System.Random c6898761a03910f08acbe56f79c5fa96
+fe5959a1f6ff9f482b6ad5996a44031f
+  $fEqPuzzle :: GHC.Classes.Eq Hangman.Puzzle
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Hangman.Puzzle Hangman.$fEqPuzzle_$c== Hangman.$fEqPuzzle_$c/= -}
+fe5959a1f6ff9f482b6ad5996a44031f
+  $fEqPuzzle_$c/= ::
+    Hangman.Puzzle -> Hangman.Puzzle -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLL),1*U(1*U,1*U,1*U)><S(SLL),1*U(1*U,1*U,1*U)>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: Hangman.Puzzle) (y :: Hangman.Puzzle) ->
+                 case Hangman.$fEqPuzzle_$c== x y of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+fe5959a1f6ff9f482b6ad5996a44031f
+  $fEqPuzzle_$c== ::
+    Hangman.Puzzle -> Hangman.Puzzle -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLL),1*U(1*U,1*U,1*U)><S(SLL),1*U(1*U,1*U,1*U)>,
+     Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Hangman.Puzzle) (w1 :: Hangman.Puzzle) ->
+                 case w of ww { Hangman.Puzzle ww1 ww2 ww3 ->
+                 case w1 of ww4 { Hangman.Puzzle ww5 ww6 ww7 ->
+                 Hangman.$w$c== ww1 ww2 ww3 ww5 ww6 ww7 } }) -}
+086a4590bf69373a1f1e1f013e6e22c3
+  $fEqPuzzle_$s$fEqMaybe ::
+    GHC.Classes.Eq (GHC.Maybe.Maybe GHC.Types.Char)
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Maybe.Maybe GHC.Types.Char)
+                  (\ (ds :: GHC.Maybe.Maybe GHC.Types.Char)
+                     (ds1 :: GHC.Maybe.Maybe GHC.Types.Char) ->
+                   case ds of wild {
+                     GHC.Maybe.Nothing
+                     -> case ds1 of wild1 {
+                          GHC.Maybe.Nothing -> GHC.Types.True
+                          GHC.Maybe.Just ipv -> GHC.Types.False }
+                     GHC.Maybe.Just a1
+                     -> case ds1 of wild1 {
+                          GHC.Maybe.Nothing -> GHC.Types.False
+                          GHC.Maybe.Just b1 -> GHC.Classes.eqChar a1 b1 } })
+                  Hangman.$fEqPuzzle_$s$fEqMaybe_$c/= -}
+fd0679a2c5df9a948a63e8cd8b30d635
+  $fEqPuzzle_$s$fEqMaybe_$c/= ::
+    GHC.Maybe.Maybe GHC.Types.Char
+    -> GHC.Maybe.Maybe GHC.Types.Char -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: GHC.Maybe.Maybe GHC.Types.Char)
+                   (y :: GHC.Maybe.Maybe GHC.Types.Char) ->
+                 case x of wild {
+                   GHC.Maybe.Nothing
+                   -> case y of wild1 {
+                        GHC.Maybe.Nothing -> GHC.Types.False
+                        GHC.Maybe.Just ipv -> GHC.Types.True }
+                   GHC.Maybe.Just a1
+                   -> case y of wild1 {
+                        GHC.Maybe.Nothing -> GHC.Types.True
+                        GHC.Maybe.Just b1
+                        -> case GHC.Classes.eqChar a1 b1 of wild2 {
+                             GHC.Types.False -> GHC.Types.True
+                             GHC.Types.True -> GHC.Types.False } } }) -}
+54520891796bf45d8c1d52039e2c350f
+  $fEqWordList :: GHC.Classes.Eq Hangman.WordList
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Hangman.WordList
+                  GHC.Classes.$fEq[]_$s$c==1
+                    `cast`
+                  (Sym (Hangman.N:WordList[0])
+                   ->_R Sym (Hangman.N:WordList[0])
+                   ->_R <GHC.Types.Bool>_R)
+                  Hangman.$fEqWordList_$s$fEq[]_$c/=
+                    `cast`
+                  (Sym (Hangman.N:WordList[0])
+                   ->_R Sym (Hangman.N:WordList[0])
+                   ->_R <GHC.Types.Bool>_R) -}
+6bdad0c369fae12710e32f4eee3f2bdf
+  $fEqWordList_$s$fEq[]_$c/= ::
+    [[GHC.Types.Char]] -> [[GHC.Types.Char]] -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: [[GHC.Types.Char]]) (y :: [[GHC.Types.Char]]) ->
+                 case GHC.Classes.$fEq[]_$s$c==1 x y of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+fe5959a1f6ff9f482b6ad5996a44031f
+  $fShowPuzzle :: GHC.Show.Show Hangman.Puzzle
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Hangman.Puzzle
+                  Hangman.$fShowPuzzle_$cshowsPrec
+                  Hangman.$fShowPuzzle_$cshow
+                  Hangman.$fShowPuzzle_$cshowList -}
+fe5959a1f6ff9f482b6ad5996a44031f
+  $fShowPuzzle1 ::
+    Hangman.Puzzle -> GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 2, Strictness: <S(LSL),1*U(A,U,U)><L,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Hangman.Puzzle) (s :: GHC.Base.String)[OneShot] ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b
+                      (c :: GHC.Types.Char -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ GHC.Types.Char
+                      @ b
+                      c
+                      n
+                      (Hangman.$fShowPuzzle_$cshow x))
+                   s) -}
+3308a2bf95a05565497dea85abc0d26a
+  $fShowPuzzle2 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# ' '#) -}
+43623532d7eb21bd9d28c36b66cde6e9
+  $fShowPuzzle3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("\n\
+                 \Guessed so far: "#) -}
+fe5959a1f6ff9f482b6ad5996a44031f
+  $fShowPuzzle_$cshow :: Hangman.Puzzle -> GHC.Base.String
+  {- Arity: 1, Strictness: <S(LSL),1*U(A,U,U)>, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Hangman.Puzzle) ->
+                 case w of ww { Hangman.Puzzle ww1 ww2 ww3 ->
+                 Hangman.$w$cshow ww2 ww3 }) -}
+fe5959a1f6ff9f482b6ad5996a44031f
+  $fShowPuzzle_$cshowList :: [Hangman.Puzzle] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Hangman.Puzzle]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Hangman.Puzzle Hangman.$fShowPuzzle1 ls s) -}
+fe5959a1f6ff9f482b6ad5996a44031f
+  $fShowPuzzle_$cshowsPrec ::
+    GHC.Types.Int -> Hangman.Puzzle -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S(LSL),1*U(A,U,U)><L,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ (ds :: GHC.Types.Int)
+                   (x :: Hangman.Puzzle)
+                   (s :: GHC.Base.String) ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b
+                      (c :: GHC.Types.Char -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ GHC.Types.Char
+                      @ b
+                      c
+                      n
+                      (Hangman.$fShowPuzzle_$cshow x))
+                   s) -}
+54520891796bf45d8c1d52039e2c350f
+  $fShowWordList :: GHC.Show.Show Hangman.WordList
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Hangman.WordList
+                  Hangman.$fShowWordList_$cshowsPrec
+                  Hangman.$fShowWordList_$cshow
+                  Hangman.$fShowWordList_$cshowList -}
+54520891796bf45d8c1d52039e2c350f
+  $fShowWordList1 :: Hangman.WordList -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <L,1*U><L,U>,
+     Unfolding: (\ (w :: Hangman.WordList) (w1 :: GHC.Base.String) ->
+                 Hangman.$w$cshowsPrec 0# w w1) -}
+d4482eb45df582353e73a5cf46aec9f1
+  $fShowWordList2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("WordList "#) -}
+7c93c97e729bd9f9dd11d13b37240126
+  $fShowWordList3 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+54520891796bf45d8c1d52039e2c350f
+  $fShowWordList_$cshow :: Hangman.WordList -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Hangman.WordList) ->
+                 Hangman.$fShowWordList_$cshowsPrec
+                   Hangman.$fShowWordList3
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+54520891796bf45d8c1d52039e2c350f
+  $fShowWordList_$cshowList :: [Hangman.WordList] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Hangman.WordList]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ Hangman.WordList
+                   Hangman.$fShowWordList1
+                   ls
+                   s) -}
+54520891796bf45d8c1d52039e2c350f
+  $fShowWordList_$cshowsPrec ::
+    GHC.Types.Int -> Hangman.WordList -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><L,1*U><L,U>, Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Hangman.WordList)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 Hangman.$w$cshowsPrec ww1 w1 w2 }) -}
+246fc58093fa8a7fee5de688f83a1380
+  $s$fEqMaybe_$c== ::
+    GHC.Maybe.Maybe GHC.Types.Char
+    -> GHC.Maybe.Maybe GHC.Types.Char -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ds :: GHC.Maybe.Maybe GHC.Types.Char)
+                   (ds1 :: GHC.Maybe.Maybe GHC.Types.Char) ->
+                 case ds of wild {
+                   GHC.Maybe.Nothing
+                   -> case ds1 of wild1 {
+                        GHC.Maybe.Nothing -> GHC.Types.True
+                        GHC.Maybe.Just ipv -> GHC.Types.False }
+                   GHC.Maybe.Just a1
+                   -> case ds1 of wild1 {
+                        GHC.Maybe.Nothing -> GHC.Types.False
+                        GHC.Maybe.Just b1 -> GHC.Classes.eqChar a1 b1 } }) -}
+84e72e5d8c50a881b2f0e467abcc546d
+  $tc'Puzzle :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11686366091391468709##
+                   7182151730351548831##
+                   Hangman.$trModule
+                   Hangman.$tc'Puzzle2
+                   0#
+                   Hangman.$tc'Puzzle1) -}
+6e3ecd1f8b1082ba8c9f687fb684f7db
+  $tc'Puzzle1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+d2de8a5cd2eb3db236a80a7a5ea324f9
+  $tc'Puzzle2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Hangman.$tc'Puzzle3) -}
+f293ca838201afba65332dd02c0f78be
+  $tc'Puzzle3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Puzzle"#) -}
+1e8faaa2055113d1a11cf049a8adbc7c
+  $tc'WordList :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   696397806160525689##
+                   17111451290736606975##
+                   Hangman.$trModule
+                   Hangman.$tc'WordList2
+                   0#
+                   Hangman.$tc'WordList1) -}
+5d97a6b8d62709d3f375940089770b9f
+  $tc'WordList1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+6e22aad65dde7bcbb212d8f02d03dac4
+  $tc'WordList2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Hangman.$tc'WordList3) -}
+c1038ef8458c2262f5f321e11fd77f34
+  $tc'WordList3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'WordList"#) -}
+af8db31c0354753c8ab745e36066338a
+  $tcPuzzle :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9435080279563965270##
+                   11653238093610231002##
+                   Hangman.$trModule
+                   Hangman.$tcPuzzle1
+                   0#
+                   GHC.Types.krep$*) -}
+2c65fd2e24882d49c6983a88c4b8e8bc
+  $tcPuzzle1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Hangman.$tcPuzzle2) -}
+204aee4de5b5915ea2526f6f8afc309b
+  $tcPuzzle2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Puzzle"#) -}
+5f3a908e24bf8863d51f14a3f5ac0b96
+  $tcWordList :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13445225350278361638##
+                   16449412068064264356##
+                   Hangman.$trModule
+                   Hangman.$tcWordList1
+                   0#
+                   GHC.Types.krep$*) -}
+93849886b02a5de98a6a822df2e76962
+  $tcWordList1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Hangman.$tcWordList2) -}
+a3d0004dcc4d143c840defdb666ba6c6
+  $tcWordList2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("WordList"#) -}
+9e61810ad197d650b3d348723a1a535a
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Hangman.$trModule3
+                   Hangman.$trModule1) -}
+546a03f602d94de27176b27bba31eb0d
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Hangman.$trModule2) -}
+6289262d3a77dcd20156ead1f82c573a
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Hangman"#) -}
+49be1b54133e710a3142659dfd51810d
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Hangman.$trModule4) -}
+4843d24891c8b75d51f2dd8bf03905b0
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("addition-0.1.0.0-Isu6SWsVkOo5ljPO0Uf38Y"#) -}
+a810a245009183475469cfa3d258d311
+  $w$c== ::
+    GHC.Base.String
+    -> [GHC.Maybe.Maybe GHC.Types.Char]
+    -> [GHC.Types.Char]
+    -> GHC.Base.String
+    -> [GHC.Maybe.Maybe GHC.Types.Char]
+    -> [GHC.Types.Char]
+    -> GHC.Types.Bool
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U><L,1*U><S,1*U><L,1*U><L,1*U>,
+     Inline: [2],
+     Unfolding: (\ (ww :: GHC.Base.String)
+                   (ww1 :: [GHC.Maybe.Maybe GHC.Types.Char])
+                   (ww2 :: [GHC.Types.Char])
+                   (ww3 :: GHC.Base.String)
+                   (ww4 :: [GHC.Maybe.Maybe GHC.Types.Char])
+                   (ww5 :: [GHC.Types.Char]) ->
+                 case GHC.Base.eqString ww ww3 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case GHC.Classes.$fEq[]_$c==
+                             @ (GHC.Maybe.Maybe GHC.Types.Char)
+                             Hangman.$fEqPuzzle_$s$fEqMaybe
+                             ww1
+                             ww4 of wild1 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True -> GHC.Base.eqString ww2 ww5 } }) -}
+47c51ca18b06657c2faac1cab22a6b6d
+  $w$cshow ::
+    [GHC.Maybe.Maybe GHC.Types.Char]
+    -> [GHC.Types.Char] -> GHC.Base.String
+  {- Arity: 2, Strictness: <S,U><L,U>, Inline: [2],
+     Unfolding: (\ (ww :: [GHC.Maybe.Maybe GHC.Types.Char])
+                   (ww1 :: [GHC.Types.Char]) ->
+                 let {
+                   n :: [GHC.Types.Char]
+                   = GHC.CString.unpackAppendCString#
+                       Hangman.$fShowPuzzle3
+                       (GHC.Base.++
+                          @ GHC.Types.Char
+                          ww1
+                          (case GHC.List.$wlenAcc @ GHC.Types.Char ww1 0# of ww2 { DEFAULT ->
+                           case Hangman.$wgo ww 0# of ww3 { DEFAULT ->
+                           Hangman.$wdrawHangman' (GHC.Prim.-# ww2 ww3) } }))
+                 } in
+                 case GHC.Base.map
+                        @ (GHC.Maybe.Maybe GHC.Types.Char)
+                        @ GHC.Types.Char
+                        Hangman.renderPuzzleChar
+                        ww of wild {
+                   [] -> n
+                   : x xs
+                   -> GHC.Base.++_$s++
+                        @ GHC.Types.Char
+                        n
+                        x
+                        (Data.OldList.prependToAll
+                           @ GHC.Types.Char
+                           Hangman.$fShowPuzzle2
+                           xs) }) -}
+54520891796bf45d8c1d52039e2c350f
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> Hangman.WordList -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, Strictness: <S,U><L,1*U><L,U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: Hangman.WordList)
+                   (w1 :: GHC.Base.String) ->
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,U> -}
+                   = \ (x :: GHC.Base.String)[OneShot] ->
+                     GHC.CString.unpackAppendCString#
+                       Hangman.$fShowWordList2
+                       (case w `cast` (Hangman.N:WordList[0]) of wild {
+                          [] -> GHC.CString.unpackAppendCString# GHC.Show.showList__4 x
+                          : x1 xs
+                          -> GHC.Types.:
+                               @ GHC.Types.Char
+                               GHC.Show.showList__3
+                               (GHC.Types.:
+                                  @ GHC.Types.Char
+                                  GHC.Show.$fShow(,)3
+                                  (GHC.Show.showLitString
+                                     x1
+                                     (GHC.Types.:
+                                        @ GHC.Types.Char
+                                        GHC.Show.$fShow(,)3
+                                        (let {
+                                           lvl43 :: [GHC.Types.Char]
+                                           = GHC.Types.: @ GHC.Types.Char GHC.Show.showList__2 x
+                                         } in
+                                         letrec {
+                                           showl :: [[GHC.Types.Char]] -> GHC.Base.String
+                                             {- Arity: 1, Strictness: <S,1*U> -}
+                                           = \ (ds2 :: [[GHC.Types.Char]]) ->
+                                             case ds2 of wild1 {
+                                               [] -> lvl43
+                                               : y ys
+                                               -> GHC.Types.:
+                                                    @ GHC.Types.Char
+                                                    GHC.Show.showList__1
+                                                    (GHC.Types.:
+                                                       @ GHC.Types.Char
+                                                       GHC.Show.$fShow(,)3
+                                                       (GHC.Show.showLitString
+                                                          y
+                                                          (GHC.Types.:
+                                                             @ GHC.Types.Char
+                                                             GHC.Show.$fShow(,)3
+                                                             (showl ys)))) }
+                                         } in
+                                         showl xs)))) })
+                 } in
+                 case GHC.Prim.>=# ww 11# of lwild {
+                   DEFAULT -> p w1
+                   1#
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w1)) }) -}
+8f9c1726044372ab7309944c5913ff45
+  $wdrawHangman' :: GHC.Prim.Int# -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>, Inline: [2] -}
+525507b5d6c99eeadd84d562e3e5fa59
+  $wfillInCharacter ::
+    GHC.Base.String
+    -> [GHC.Maybe.Maybe GHC.Types.Char]
+    -> [GHC.Types.Char]
+    -> GHC.Types.Char
+    -> (# GHC.Base.String, [GHC.Maybe.Maybe GHC.Types.Char],
+          [GHC.Types.Char] #)
+  {- Arity: 4, HasNoCafRefs, Strictness: <L,U><L,1*U><L,U><L,U(U)>,
+     Inline: [2],
+     Unfolding: (\ (ww :: GHC.Base.String)
+                   (ww1 :: [GHC.Maybe.Maybe GHC.Types.Char])
+                   (ww2 :: [GHC.Types.Char])
+                   (w :: GHC.Types.Char) ->
+                 (# ww,
+                    letrec {
+                      go2 :: [GHC.Types.Char]
+                             -> [GHC.Maybe.Maybe GHC.Types.Char]
+                             -> [GHC.Maybe.Maybe GHC.Types.Char]
+                        {- Arity: 2, Strictness: <S,1*U><L,1*U> -}
+                      = \ (ds :: [GHC.Types.Char])
+                          (ds1 :: [GHC.Maybe.Maybe GHC.Types.Char]) ->
+                        case ds of wild {
+                          [] -> GHC.Types.[] @ (GHC.Maybe.Maybe GHC.Types.Char)
+                          : ipv ipv1
+                          -> case ds1 of wild1 {
+                               [] -> GHC.Types.[] @ (GHC.Maybe.Maybe GHC.Types.Char)
+                               : ipv2 ipv3
+                               -> GHC.Types.:
+                                    @ (GHC.Maybe.Maybe GHC.Types.Char)
+                                    (case ipv of wild2 { GHC.Types.C# x ->
+                                     case w of wild3 { GHC.Types.C# y ->
+                                     case GHC.Prim.eqChar# x y of lwild {
+                                       DEFAULT -> ipv2
+                                       1# -> GHC.Maybe.Just @ GHC.Types.Char wild2 } } })
+                                    (go2 ipv1 ipv3) } }
+                    } in
+                    go2 ww ww1,
+                    GHC.Types.: @ GHC.Types.Char w ww2 #)) -}
+cc9995073795236de01509c733b945e2
+  $wgameOver ::
+    GHC.Base.String
+    -> [GHC.Maybe.Maybe GHC.Types.Char]
+    -> [GHC.Types.Char]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4, Strictness: <L,U><S,1*U><S,1*U><S,U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Base.String)
+                   (ww1 :: [GHC.Maybe.Maybe GHC.Types.Char])
+                   (ww2 :: [GHC.Types.Char])
+                   (w :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.List.$wlenAcc @ GHC.Types.Char ww2 0# of ww3 { DEFAULT ->
+                 case Hangman.$wgo ww1 0# of ww4 { DEFAULT ->
+                 case GHC.Prim.># (GHC.Prim.-# ww3 ww4) 6# of lwild {
+                   DEFAULT -> (# w, GHC.Tuple.() #)
+                   1#
+                   -> case (GHC.IO.Handle.Text.hPutStr'
+                              GHC.IO.Handle.FD.stdout
+                              Hangman.gameOver3
+                              GHC.Types.True)
+                             `cast`
+                           (GHC.Types.N:IO[0] <()>_R)
+                             w of ds1 { (#,#) ipv ipv1 ->
+                      case (GHC.IO.Handle.Text.hPutStr'
+                              GHC.IO.Handle.FD.stdout
+                              (GHC.CString.unpackAppendCString# Hangman.gameOver2 ww)
+                              GHC.Types.True)
+                             `cast`
+                           (GHC.Types.N:IO[0] <()>_R)
+                             ipv of ds2 { (#,#) ipv2 ipv3 ->
+                      System.Exit.exitSuccess1 @ () ipv2 } } } } }) -}
+1724f982022f73342ca81815cc128d1b
+  $wgameWin ::
+    [GHC.Maybe.Maybe GHC.Types.Char]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S,1*U><S,U>, Inline: [2],
+     Unfolding: (\ (ww :: [GHC.Maybe.Maybe GHC.Types.Char])
+                   (w :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 let {
+                   exit :: (# GHC.Prim.State# GHC.Prim.RealWorld, () #) <join 0>
+                   = (# w, GHC.Tuple.() #)
+                 } in
+                 let {
+                   $j :: (# GHC.Prim.State# GHC.Prim.RealWorld, () #) <join 0>
+                   = case (GHC.IO.Handle.Text.hPutStr'
+                             GHC.IO.Handle.FD.stdout
+                             Hangman.gameWin2
+                             GHC.Types.True)
+                            `cast`
+                          (GHC.Types.N:IO[0] <()>_R)
+                            w of ds1 { (#,#) ipv ipv1 ->
+                     System.Exit.exitSuccess1 @ () ipv }
+                 } in
+                 letrec {
+                   go :: [GHC.Maybe.Maybe GHC.Types.Char]
+                         -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                     <join 1> {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [GHC.Maybe.Maybe GHC.Types.Char]) ->
+                     case ds of wild {
+                       [] -> $j
+                       : y ys
+                       -> case y of wild1 {
+                            GHC.Maybe.Nothing -> exit GHC.Maybe.Just ipv -> go ys } }
+                 } in
+                 go ww) -}
+a2fa00a38ee7e11000ebb769e388c8c5
+  $wgo ::
+    [GHC.Maybe.Maybe GHC.Types.Char] -> GHC.Prim.Int# -> GHC.Prim.Int#
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,U>, Inline: [2] -}
+fbfd0570af625035bd21f96b19a0766a
+  $wrunGame ::
+    GHC.Base.String
+    -> [GHC.Maybe.Maybe GHC.Types.Char]
+    -> [GHC.Types.Char]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4, Strictness: <L,U><S,U><L,U><S,U>, Inline: [2] -}
+fe5959a1f6ff9f482b6ad5996a44031f
+  data Puzzle
+    = Puzzle GHC.Base.String
+             [GHC.Maybe.Maybe GHC.Types.Char]
+             [GHC.Types.Char]
+54520891796bf45d8c1d52039e2c350f
+  newtype WordList = WordList [GHC.Base.String]
+4f62f66fdf394bf3cad724486e9f5d5b
+  allWords :: GHC.Types.IO Hangman.WordList
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Hangman.allWords1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <Hangman.WordList>_R)) -}
+bbdf9e35298765631a11f406a38586f4
+  allWords1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Hangman.WordList #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.IO.Handle.FD.openFile1
+                        Hangman.allWords2
+                        GHC.IO.IOMode.ReadMode
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        ipv1
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 (# ipv2,
+                    (Data.OldList.lines ipv3)
+                      `cast`
+                    (Sym (Hangman.N:WordList[0])) #) } }) -}
+fa3b275980baede15e56c17510e0a0c0
+  allWords2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Hangman.allWords3) -}
+683ba3e99ccff07833e13aa03767ae91
+  allWords3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("data/dict.txt"#) -}
+7a1afea354728d4ecd930bc20f5b5801
+  alreadyGuessed ::
+    Hangman.Puzzle -> GHC.Types.Char -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ds :: Hangman.Puzzle) (c :: GHC.Types.Char) ->
+                 case ds of wild { Hangman.Puzzle ds1 ds2 guessed ->
+                 GHC.List.elem @ GHC.Types.Char GHC.Classes.$fEqChar c guessed }) -}
+a410210cc0a52795bad7a5e90aa4d345
+  charInWord :: Hangman.Puzzle -> GHC.Types.Char -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U,A,A)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ds :: Hangman.Puzzle) (c :: GHC.Types.Char) ->
+                 case ds of wild { Hangman.Puzzle str ds1 ds2 ->
+                 GHC.List.elem @ GHC.Types.Char GHC.Classes.$fEqChar c str }) -}
+e089e5d959e4f68326e50128c84ca9cd
+  drawHangman :: Hangman.Puzzle -> GHC.Base.String
+  {- Arity: 1, Strictness: <S(LSS),1*U(A,1*U,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (pzl :: Hangman.Puzzle) ->
+                 Hangman.drawHangman' (Hangman.incorrectGuesses pzl)) -}
+f93c65395c2e3882cce5591a6fc8bb9a
+  drawHangman' :: GHC.Types.Int -> GHC.Base.String
+  {- Arity: 1, Strictness: <S(S),1*U(1*U)>, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Types.Int) ->
+                 case w of ww { GHC.Types.I# ww1 -> Hangman.$wdrawHangman' ww1 }) -}
+2ec69eb7aa5ebf0d860d36ac76b30bfb
+  fillInCharacter ::
+    Hangman.Puzzle -> GHC.Types.Char -> Hangman.Puzzle
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U(U,1*U,U)><L,U(U)>m,
+     Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Hangman.Puzzle) (w1 :: GHC.Types.Char) ->
+                 case w of ww { Hangman.Puzzle ww1 ww2 ww3 ->
+                 case Hangman.$wfillInCharacter
+                        ww1
+                        ww2
+                        ww3
+                        w1 of ww4 { (#,,#) ww5 ww6 ww7 ->
+                 Hangman.Puzzle ww5 ww6 ww7 } }) -}
+bf51ac7948653afefac22205e41abb25
+  freshPuzzle :: GHC.Base.String -> Hangman.Puzzle
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (str :: GHC.Base.String) ->
+                 Hangman.Puzzle
+                   str
+                   (GHC.Base.build
+                      @ (GHC.Maybe.Maybe GHC.Types.Char)
+                      (\ @ b1
+                         (c :: GHC.Maybe.Maybe GHC.Types.Char -> b1 -> b1)[OneShot]
+                         (n :: b1)[OneShot] ->
+                       GHC.Base.foldr
+                         @ GHC.Types.Char
+                         @ b1
+                         (GHC.Base.mapFB
+                            @ (GHC.Maybe.Maybe GHC.Types.Char)
+                            @ b1
+                            @ GHC.Types.Char
+                            c
+                            Hangman.freshPuzzle1)
+                         n
+                         str))
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+63cfdf05d5b9dfee00f58f265ee9b020
+  freshPuzzle1 :: GHC.Types.Char -> GHC.Maybe.Maybe GHC.Types.Char
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (x :: GHC.Types.Char) -> GHC.Maybe.Nothing @ GHC.Types.Char) -}
+14b6e936e1974f7e9aa428e1cbdc0e29
+  gameOver :: Hangman.Puzzle -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <S(LSS),1*U(U,1*U,1*U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Hangman.gameOver1
+                  `cast`
+                (<Hangman.Puzzle>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+046b253b57d832e43c086921fc2db759
+  gameOver1 ::
+    Hangman.Puzzle
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S(LSS),1*U(U,1*U,1*U)><S,U>, Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Hangman.Puzzle)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w of ww { Hangman.Puzzle ww1 ww2 ww3 ->
+                 Hangman.$wgameOver ww1 ww2 ww3 w1 }) -}
+0b7038e8f0415c68b07ce2d501b0c9fd
+  gameOver2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("The word was: "#) -}
+82525f648ad2a54766057166cd7de187
+  gameOver3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Hangman.gameOver4) -}
+d834436873d10ffd7e80c6e5ebf20323
+  gameOver4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("You lose!"#) -}
+95c5952fe6f8a1c9892bef87636b135e
+  gameWin :: Hangman.Puzzle -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <S(LSL),1*U(A,1*U,A)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Hangman.gameWin1
+                  `cast`
+                (<Hangman.Puzzle>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+e9578645e75b50a4c3d470f5730a0c1e
+  gameWin1 ::
+    Hangman.Puzzle
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S(LSL),1*U(A,1*U,A)><S,U>, Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Hangman.Puzzle)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w of ww { Hangman.Puzzle ww1 ww2 ww3 ->
+                 Hangman.$wgameWin ww2 w1 }) -}
+26cf5541a192c3cf48f6c0974068336f
+  gameWin2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Hangman.gameWin3) -}
+e9a68f2bc6ab04f3f402a99043001ccf
+  gameWin3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("You win!"#) -}
+686fb02e193d19203de214d7a36d86b2
+  gameWords :: GHC.Types.IO Hangman.WordList
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Hangman.gameWords1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <Hangman.WordList>_R)) -}
+921a05bee72a0698f015bb1f9428eedb
+  gameWords1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Hangman.WordList #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.IO.Handle.FD.openFile1
+                        Hangman.allWords2
+                        GHC.IO.IOMode.ReadMode
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        ipv1
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 (# ipv2,
+                    (GHC.List.filter
+                       @ [GHC.Types.Char]
+                       Hangman.gameWords2
+                       (Data.OldList.lines ipv3))
+                      `cast`
+                    (Sym (Hangman.N:WordList[0])) #) } }) -}
+761d0b629b4f516c18e6d469360d0df4
+  gameWords2 :: [GHC.Types.Char] -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: (\ (w :: [GHC.Types.Char]) ->
+                 case GHC.List.$wlenAcc @ GHC.Types.Char w 0# of ww2 { DEFAULT ->
+                 case GHC.Prim.>=# ww2 5# of lwild {
+                   DEFAULT -> GHC.Types.False
+                   1#
+                   -> GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.<# ww2 6#) } }) -}
+2b1ffe7e8eadb59219e02c280478db78
+  handleGuess ::
+    Hangman.Puzzle -> GHC.Types.Char -> GHC.Types.IO Hangman.Puzzle
+  {- Arity: 3, Strictness: <L,1*U(U,U,U)><L,U(U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Hangman.handleGuess1
+                  `cast`
+                (<Hangman.Puzzle>_R
+                 ->_R <GHC.Types.Char>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <Hangman.Puzzle>_R)) -}
+e165c0afe71ee3e1ee6f07c7875a2f6f
+  handleGuess1 ::
+    Hangman.Puzzle
+    -> GHC.Types.Char
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Hangman.Puzzle #)
+  {- Arity: 3, Strictness: <L,1*U(U,U,U)><L,U(U)><S,U>,
+     Unfolding: (\ (puzzle :: Hangman.Puzzle)
+                   (guess :: GHC.Types.Char)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case (GHC.IO.Handle.Text.hPutStr'
+                         GHC.IO.Handle.FD.stdout
+                         (GHC.CString.unpackAppendCString#
+                            Hangman.handleGuess8
+                            (GHC.Types.:
+                               @ GHC.Types.Char
+                               guess
+                               (GHC.Types.[] @ GHC.Types.Char)))
+                         GHC.Types.True)
+                        `cast`
+                      (GHC.Types.N:IO[0] <()>_R)
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case puzzle of wild { Hangman.Puzzle ds ds2 guessed ->
+                 case GHC.List.elem
+                        @ GHC.Types.Char
+                        GHC.Classes.$fEqChar
+                        guess
+                        guessed of wild1 {
+                   GHC.Types.False
+                   -> case GHC.List.elem
+                             @ GHC.Types.Char
+                             GHC.Classes.$fEqChar
+                             guess
+                             ds of wild2 {
+                        GHC.Types.False
+                        -> case (GHC.IO.Handle.Text.hPutStr'
+                                   GHC.IO.Handle.FD.stdout
+                                   Hangman.handleGuess6
+                                   GHC.Types.True)
+                                  `cast`
+                                (GHC.Types.N:IO[0] <()>_R)
+                                  ipv of ds3 { (#,#) ipv2 ipv3 ->
+                           (# ipv2,
+                              case Hangman.$wfillInCharacter
+                                     ds
+                                     ds2
+                                     guessed
+                                     guess of ww { (#,,#) ww1 ww2 ww3 ->
+                              Hangman.Puzzle ww1 ww2 ww3 } #) }
+                        GHC.Types.True
+                        -> case (GHC.IO.Handle.Text.hPutStr'
+                                   GHC.IO.Handle.FD.stdout
+                                   Hangman.handleGuess4
+                                   GHC.Types.True)
+                                  `cast`
+                                (GHC.Types.N:IO[0] <()>_R)
+                                  ipv of ds3 { (#,#) ipv2 ipv3 ->
+                           (# ipv2,
+                              case Hangman.$wfillInCharacter
+                                     ds
+                                     ds2
+                                     guessed
+                                     guess of ww { (#,,#) ww1 ww2 ww3 ->
+                              Hangman.Puzzle ww1 ww2 ww3 } #) } }
+                   GHC.Types.True
+                   -> case (GHC.IO.Handle.Text.hPutStr'
+                              GHC.IO.Handle.FD.stdout
+                              Hangman.handleGuess2
+                              GHC.Types.True)
+                             `cast`
+                           (GHC.Types.N:IO[0] <()>_R)
+                             ipv of ds3 { (#,#) ipv2 ipv3 ->
+                      (# ipv2, wild #) } } } }) -}
+d9d8187cdca61dd5fbd2626992cee22f
+  handleGuess2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Hangman.handleGuess3) -}
+5bae2636ddba2367cd0184214e7e9320
+  handleGuess3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("You already guessed that character, pick  something else!"#) -}
+0f1d8d4e59fd388bb6f888b64fc93210
+  handleGuess4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Hangman.handleGuess5) -}
+893cf4b72ca77337588708e84e8d4acd
+  handleGuess5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("This character was in the word, filling in the word accordingly"#) -}
+afef3b59e47040e8da81e25ac109e719
+  handleGuess6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Hangman.handleGuess7) -}
+3dbd114d89294b199771a13bd9e2e7bb
+  handleGuess7 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("This character wasn't in the word, try again."#) -}
+303a4e3f270c50ed92146f71927bda70
+  handleGuess8 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Your guess was: "#) -}
+932552234faeb28e729ce4cef8b49dc0
+  incorrectGuesses :: Hangman.Puzzle -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSS),1*U(A,1*U,1*U)>m,
+     Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Hangman.Puzzle) ->
+                 case w of ww { Hangman.Puzzle ww1 ww2 ww3 ->
+                 case GHC.List.$wlenAcc @ GHC.Types.Char ww3 0# of ww4 { DEFAULT ->
+                 case Hangman.$wgo ww2 0# of ww5 { DEFAULT ->
+                 GHC.Types.I# (GHC.Prim.-# ww4 ww5) } } }) -}
+8305bc6f9fd31f7759cd70101d1305dd
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Hangman.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+af874d9afd3c57a5bac0077fead02e8b
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.IO.Handle.hSetBuffering1
+                        GHC.IO.Handle.FD.stdout
+                        GHC.IO.Handle.Types.NoBuffering
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.FD.openFile1
+                        Hangman.allWords2
+                        GHC.IO.IOMode.ReadMode
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        ipv3
+                        ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                 let {
+                   ipv6 :: [[GHC.Types.Char]]
+                   = GHC.List.filter
+                       @ [GHC.Types.Char]
+                       Hangman.gameWords2
+                       (Data.OldList.lines ipv5)
+                 } in
+                 case System.Random.$fRandomInt3
+                        (Hangman.$fShowWordList3,
+                         case GHC.List.$wlenAcc
+                                @ [GHC.Types.Char]
+                                ipv6
+                                0# of ww2 { DEFAULT ->
+                         GHC.Types.I# ww2 })
+                        ipv4 of ds4 { (#,#) ipv7 ipv8 ->
+                 case ipv8 of ww { GHC.Types.I# ww1 ->
+                 let {
+                   str :: GHC.Base.String
+                   = GHC.Base.map
+                       @ GHC.Types.Char
+                       @ GHC.Types.Char
+                       GHC.Unicode.toLower
+                       (GHC.List.$w!! @ GHC.Base.String ipv6 ww1)
+                 } in
+                 Hangman.$wrunGame
+                   str
+                   (GHC.Base.map
+                      @ GHC.Types.Char
+                      @ (GHC.Maybe.Maybe GHC.Types.Char)
+                      Hangman.freshPuzzle1
+                      str)
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   ipv7 } } } } }) -}
+4ec436a93e382f4df25fd1444a48a25a
+  maxWordLength :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 6#) -}
+3b815abd2fae08a40b5043fd48af442f
+  minWordLength :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 5#) -}
+44e43d0de8c9ccdec36287334107beed
+  randomWord :: Hangman.WordList -> GHC.Types.IO GHC.Base.String
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Hangman.randomWord1
+                  `cast`
+                (<Hangman.WordList>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R)) -}
+5eae3d2b60e9a99dcce061e3e7b5e179
+  randomWord' :: GHC.Types.IO GHC.Base.String
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Hangman.randomWord'1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R)) -}
+ca4453120f752a258976ac2c9e3565d2
+  randomWord'1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Base.String #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.IO.Handle.FD.openFile1
+                        Hangman.allWords2
+                        GHC.IO.IOMode.ReadMode
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        ipv1
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 Hangman.randomWord1
+                   (GHC.List.filter
+                      @ [GHC.Types.Char]
+                      Hangman.gameWords2
+                      (Data.OldList.lines ipv3))
+                     `cast`
+                   (Sym (Hangman.N:WordList[0]))
+                   ipv2 } }) -}
+e81f64787016b4555d1529f46ddb83a0
+  randomWord1 ::
+    Hangman.WordList
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Base.String #)
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: (\ (ds :: Hangman.WordList)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case System.Random.$fRandomInt3
+                        (Hangman.$fShowWordList3,
+                         case GHC.List.$wlenAcc
+                                @ [GHC.Types.Char]
+                                ds `cast` (Hangman.N:WordList[0])
+                                0# of ww2 { DEFAULT ->
+                         GHC.Types.I# ww2 })
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 (# ipv,
+                    GHC.List.!!
+                      @ GHC.Base.String
+                      ds `cast` (Hangman.N:WordList[0])
+                      ipv1 #) }) -}
+bb5bab35ab641271785f669f6ae2ce9e
+  renderPuzzleChar ::
+    GHC.Maybe.Maybe GHC.Types.Char -> GHC.Types.Char
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: GHC.Maybe.Maybe GHC.Types.Char) ->
+                 case ds of wild {
+                   GHC.Maybe.Nothing -> Hangman.renderPuzzleChar1
+                   GHC.Maybe.Just c -> c }) -}
+3de502497c82a407446491984d2ecbc6
+  renderPuzzleChar1 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# '_'#) -}
+18f2507552301aba3746d6c1cdb41ee9
+  runGame :: Hangman.Puzzle -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <S(LSL),1*U(U,U,U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Hangman.runGame1
+                  `cast`
+                (<Hangman.Puzzle>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+bdc98da768a2a67ee677803ab67c9217
+  runGame1 ::
+    Hangman.Puzzle
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S(LSL),1*U(U,U,U)><S,U>, Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Hangman.Puzzle)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w of ww { Hangman.Puzzle ww1 ww2 ww3 ->
+                 Hangman.$wrunGame ww1 ww2 ww3 w1 }) -}
+instance [safe] GHC.Classes.Eq [Hangman.Puzzle]
+  = Hangman.$fEqPuzzle
+instance [safe] GHC.Classes.Eq [Hangman.WordList]
+  = Hangman.$fEqWordList
+instance [safe] GHC.Show.Show [Hangman.Puzzle]
+  = Hangman.$fShowPuzzle
+instance [safe] GHC.Show.Show [Hangman.WordList]
+  = Hangman.$fShowWordList
+"SPEC/Hangman $fEqMaybe @ Char" [orphan] forall (v :: GHC.Classes.Eq
+                                                        GHC.Types.Char)
+  GHC.Maybe.$fEqMaybe @ GHC.Types.Char v
+  = Hangman.$fEqPuzzle_$s$fEqMaybe
+"SPEC/Hangman $fEqMaybe_$c/= @ Char" [orphan] forall ($dEq :: GHC.Classes.Eq
+                                                                GHC.Types.Char)
+  GHC.Maybe.$fEqMaybe_$c/= @ GHC.Types.Char $dEq
+  = Hangman.$fEqPuzzle_$s$fEqMaybe_$c/=
+"SPEC/Hangman $fEqMaybe_$c== @ Char" [orphan] forall ($dEq :: GHC.Classes.Eq
+                                                                GHC.Types.Char)
+  GHC.Maybe.$fEqMaybe_$c== @ GHC.Types.Char $dEq
+  = Hangman.$s$fEqMaybe_$c==
+"SPEC/Hangman $fEq[]_$c/= @ [Char]" [orphan] forall ($dEq :: GHC.Classes.Eq
+                                                               [GHC.Types.Char])
+  GHC.Classes.$fEq[]_$c/= @ [GHC.Types.Char] $dEq
+  = Hangman.$fEqWordList_$s$fEq[]_$c/=
+trusted: safe
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+
