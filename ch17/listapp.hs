@@ -82,6 +82,6 @@ instance Functor ZipList' where
 
 instance Applicative ZipList' where
   pure = ZipList' <$> pure
-  Nil <*> _ = Nil
-  _ <*> Nil = Nil
+  (ZipList' Nil) <*> _ = ZipList' Nil
+  _ <*> (ZipList' Nil) = ZipList' Nil
   fs <*> ys = undefined
