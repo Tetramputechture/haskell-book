@@ -57,3 +57,31 @@ xsTest = [("b", "w", "c")]
 
 testListApplicative :: IO ()
 testListApplicative = quickBatch $ applicative xsTest
+
+-- | ziplist
+
+take' :: Int -> List a -> List a
+take' n Nil = Nil
+take' 0 _ = Nil
+take' n (Cons x xs) = Cons x (take' (n-1) xs) 
+
+newtype ZipList' a =
+  ZipList' (List a)
+  deriving (Eq, Show)
+
+instance Eq a => EqProp (ZipList' a) where
+  xs =-= ys = xs' `eq` ys'
+    where xs' = let (ZipList' l) = xs
+                in take' 3000 l
+          ys' = let (ZipList' l) = ys
+                in take' 3000 l
+
+instance Functor ZipList' where
+  fmap f (ZipList' xs) =
+    ZipList' $ fmap f xs
+
+instance Applicative ZipList' where
+  pure = ZipList' <$> pure
+  Nil <*> _ = Nil
+  _ <*> Nil = Nil
+  fs <*> ys = undefined
