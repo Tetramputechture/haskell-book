@@ -10,6 +10,9 @@ data List a =
   | Cons a (List a)
   deriving (Eq, Show)
 
+toMyList :: [a] -> List a
+toMyList = foldr Cons Nil
+
 instance Monoid (List a) where
   mempty = Nil
 
@@ -53,7 +56,7 @@ instance Arbitrary a
                (5, Cons <$> arbitrary <*> arbitrary)]
 
 instance Eq a => EqProp (List a) where (=-=) = eq
-xsTest = [("b", "w", "c")]
+xsTest = toMyList [("a", "b", "c")]
 
 testListApplicative :: IO ()
 testListApplicative = quickBatch $ applicative xsTest
@@ -81,7 +84,23 @@ instance Functor ZipList' where
     ZipList' $ fmap f xs
 
 instance Applicative ZipList' where
-  pure = ZipList' <$> pure
+  pure a = ZipList' $ repeat' a
   (ZipList' Nil) <*> _ = ZipList' Nil
   _ <*> (ZipList' Nil) = ZipList' Nil
-  fs <*> ys = undefined
+  -- fs <*> xs = fmap (\f -> take' 1 (f <$> pure xs)) fs
+  (ZipList' fs) <*> (ZipList' ys) = ZipList' $ zipWith' ($) fs ys
+
+repeat' :: a -> List a
+repeat' a = Cons a (repeat' a)
+
+zipWith' :: (a -> b -> c) -> List a -> List b -> List c
+zipWith' _ Nil _ = Nil
+zipWith' _ _ Nil = Nil
+zipWith' fn (Cons x xs) (Cons y ys) = Cons (fn x y) (zipWith' fn xs ys)
+
+instance Arbitrary a 
+      => Arbitrary (ZipList' a) where
+  arbitrary = ZipList' <$> arbitrary
+
+testZipListApplicative :: IO ()
+testZipListApplicative = quickBatch $ applicative (ZipList' xsTest)
