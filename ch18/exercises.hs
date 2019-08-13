@@ -167,7 +167,7 @@ runTests = do
 -- j 
 
 j :: Monad m => m (m a) -> m a
-j = flip (>>=) (id <$>)
+j = (=<<) (id <$>) 
 
 -- l1
 
