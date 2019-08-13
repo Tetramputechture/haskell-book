@@ -172,4 +172,4 @@ j = (=<<) (id <$>)
 -- l1
 
 l1 :: Monad m => (a -> b) -> m a -> m b
-l1 f xs = xs >>= (\x -> return (f x))
+l1 f = (=<<) (\x -> return (f x))
